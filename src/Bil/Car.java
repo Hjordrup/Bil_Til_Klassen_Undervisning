@@ -215,34 +215,61 @@ public class Car {
 
 
     public void pressBreakPedal(int AmountOfBreaking) {
-        if(AmountOfBreaking > 5 ){
-            setBreakPedal(5);
-            setSpeedPedal(0);
-            setCurrentSpeed(0);
-        }else if (AmountOfBreaking<0){
-            setBreakPedal(0);
-        }else
-        setBreakPedal(AmountOfBreaking);
-        setSpeedPedal(0);
-        setCurrentSpeed(0);
+        if(AmountOfBreaking >= 5 ){
+            if (getCurrentSpeed() > 0){
+                while (getCurrentSpeed() > 0) {
+                    setCurrentSpeed(getCurrentSpeed()-5);
+                    System.out.println("this is the speed you are driving at"+ currentSpeed);
+                }
+            }
+        }else if(AmountOfBreaking >= 4 ){
+            if (getCurrentSpeed() > 0){
+                while (getCurrentSpeed() > 0) {
+                    setCurrentSpeed(getCurrentSpeed()-4);
+                    System.out.println("this is the speed you are driving at"+ currentSpeed);
+                }
+            }
+        }else if(AmountOfBreaking >= 3 ){
+            if (getCurrentSpeed() > 0){
+                while (getCurrentSpeed() > 0) {
+                    setCurrentSpeed(getCurrentSpeed()-3);
+                    System.out.println("this is the speed you are driving at"+ currentSpeed);
+                }
+            }
+        }else if(AmountOfBreaking >= 2 ){
+            if (getCurrentSpeed() > 0){
+                while (getCurrentSpeed() > 0) {
+                    setCurrentSpeed(getCurrentSpeed()-2);
+                    System.out.println("this is the speed you are driving at"+ currentSpeed);
+                }
+            }
+        }else if(AmountOfBreaking >= 1 ){
+            if (getCurrentSpeed() > 0){
+                while (getCurrentSpeed() > 0) {
+                    setCurrentSpeed(getCurrentSpeed()-1);
+                    System.out.println("this is the speed you are driving at"+ currentSpeed);
+                }
+            }
+        }
+
 
     }
 
 
     public void pressSpeedPedal(int AmountOfSpeed) {
         if (engin && !handbreak && currentGear>0)
-        if(AmountOfSpeed> 5 ){
+        if(AmountOfSpeed > 5 ){
             setSpeedPedal(5);
             setCurrentSpeed(currentGear * (speedPedal *8));
             setCurrentRPM(getCurrentSpeed()*28);
-            if (getCurrentSpeed()>0) System.out.println("bilen er nu i bevægelse");
+            System.out.println("Bilen er i bevægelse");
         }else if (AmountOfSpeed<0){
             setSpeedPedal(0);
         }else
             setSpeedPedal(AmountOfSpeed);
             setCurrentSpeed(currentGear * (speedPedal *8));
         setCurrentRPM(getCurrentSpeed()*28);
-        if (getCurrentSpeed()>0) System.out.println("bilen er nu i bevægelse");
+
 
 
     }

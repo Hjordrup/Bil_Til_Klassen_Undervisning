@@ -97,7 +97,7 @@ public class carTest {
         System.out.println();
 
 
-        System.out.println("Test 15 test af bilens fodbremse  i stille stående bil med et tryk på 2  -- forventet svar fodbremsen er nu 2" );
+        System.out.println("Test 15 test af bilens fodbremse  i stille stående bil med et tryk på 2  -- forventet svar fodbremsen er nu 0" );
         testfootbreak();
         System.out.println("****************************************************************");
         System.out.println();
@@ -109,7 +109,7 @@ public class carTest {
         System.out.println();
 
 
-        System.out.println("Test 17 test af bilens Gear  i slukket bil -- forventet svar Bilens Gear virker ikke når bilen er slukket " );
+        System.out.println("Test 17 test af bilens Gear  i slukket bil" );
         testGear();
         System.out.println("****************************************************************");
         System.out.println();
@@ -121,19 +121,19 @@ public class carTest {
         System.out.println();
 
 
-        System.out.println("Test 19 test af bilens Odometer i tændt stående bil -- forventet svar blisen Gear er nu 1" );
+        System.out.println("Test 19 test af bilens Odometer i tændt stående bil" );
         testOdometerOn();
         System.out.println("****************************************************************");
         System.out.println();
 
 
-        System.out.println("Test 20 test af bil kan kører -- forventet at bilen er i bevægelse" );
+        System.out.println("Test 20 test af bil kan køre forventet at bilen har en hastighed" );
         testdrive();
         System.out.println("****************************************************************");
         System.out.println();
 
 
-        System.out.println("Test 21 test af bilens RPM måler -- forventet at bilen ændre rpm til 5600 " );
+        System.out.println("Test 21 test af bilens RPM måler -- forventer RPM = 5600" );
         testRPM();
         System.out.println("****************************************************************");
         System.out.println();
