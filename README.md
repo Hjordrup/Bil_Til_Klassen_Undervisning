@@ -5,6 +5,7 @@ Lavet af Anders Hjordrup Larsen.
 
 
 For at bilen kan køre skal man tænde mortoren samt slippe håndbremsen og sætte den i Gear og så trykke på speederen. 
+Bilen kan i øjeblikket kun kører fremad og kan ikke skite retning. 
 
 
 
