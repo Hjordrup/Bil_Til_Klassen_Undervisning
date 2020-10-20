@@ -109,25 +109,25 @@ public class carTest {
         System.out.println();
 
 
-        System.out.println("Test 17 test af bilens Gear  i slukket bil" );
+        System.out.println("Test 17 test af bilens Gear  i slukket bil -- forventet svar er at Gear ikke virker i en slukket bil " );
         testGear();
         System.out.println("****************************************************************");
         System.out.println();
 
 
-        System.out.println("Test 18 test af bilens Gear i tændt stående bil" );
+        System.out.println("Test 18 test af bilens Gear i tændt stående bil -- Forventet svar er at Gear skifer fra 0 til 1 " );
         testGearOn();
         System.out.println("****************************************************************");
         System.out.println();
 
 
-        System.out.println("Test 19 test af bilens Odometer i tændt stående bil" );
+        System.out.println("Test 19 test af bilens Odometer i tændt stående bil -- forvetet svar er 0 i alle " );
         testOdometerOn();
         System.out.println("****************************************************************");
         System.out.println();
 
 
-        System.out.println("Test 20 test af bil kan køre forventet at bilen har en hastighed" );
+        System.out.println("Test 20 test af bil kan køre forventet at bilen har en hastighed -- forventet svar er at bilen nu er i først Gear med et tryk på 1 på speeder og bilen køre med 8 i hastighed" );
         testdrive();
         System.out.println("****************************************************************");
         System.out.println();
