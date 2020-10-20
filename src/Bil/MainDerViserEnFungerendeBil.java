@@ -1,6 +1,6 @@
 package Bil;
 
-public class MainBilIAction {
+public class MainDerViserEnFungerendeBil {
 
     public static void main(String[] args) {
 
