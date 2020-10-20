@@ -27,7 +27,7 @@ public class MainDerViserEnFungerendeBil {
         Kia.gaerShift(5);
         Kia.pressSpeedPedal(5);
         Kia.checkOdometer();
-        Kia.pressBreakPedal(5);
+        Kia.pressBreakPedal(1);
 
     }
 

@@ -180,18 +180,18 @@ public class Car {
     }
 
     public void vindScreenWiperOnFront(int speed) {
-        if (engin && speed <5 && speed >0){
+        if (engin && speed <=5 && speed >0){
             setFrontWipers(speed);
             System.out.println("frontWipers are on and their speed is " + frontWipers);
-        }else System.out.println("Tænd mortoren for at startet viskerne ");
+        }else System.out.println("Tænd mortoren for at startet viskerne eller vælge en hastighed bilen kan bruge");
 
     }
 
     public void vindScreenWiperOnBack(int speed) {
-        if (engin && speed <5 && speed >0){
+        if (engin && speed <=5 && speed >0){
             setBackWipers(speed);
             System.out.println("backWipers are on and their speed is " + backWipers);
-        }else System.out.println("Tænd mortoren for at startet viskerne ");
+        }else System.out.println("Tænd mortoren for at startet viskerne eller vælge en hastighed bilen kan bruge");
 
     }
 
