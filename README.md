@@ -16,7 +16,7 @@ Bilen kan i øjeblikket kun kører fremad og kan ikke skite retning.
 4. Bilen kan starte og slukke sine visker bagpå ved at skrive Objektnavn.vindScreenWiperOnBack/vindScreenWiperOffBack. begge tager en speed 
 5. Bilen kan starte sin mortor ved at skrive Objektnavn.startEngin dog skal man første lave en nøgle med et password i dette tilfælde Anders. 
 6. Bilen har en håndbremse der kan trække og slippe ved at skrive Objektnavn.hanbreakOff/handbreakOn. 
-7. Bilen har en fodbremse der i øjeblikket sætter bilens hastighed til nul. Denne kan bruges ved at skrive Objektnavn.pressBreakPedal(int), 
+7. Bilen har en fodbremse der i øjeblikket sætter bilens hastighed til nul ved at sænke hastigheden med den mængde tryk du vældere. Denne kan bruges ved at skrive Objektnavn.pressBreakPedal(int), 
 8. Bilen har en speeder der kan styre ved at skrive objektnavn.pressSpeedPedal(int 0-5) 
 9. Bilen har et triptonic Gear system som man kan kalde ved at skrive Objektnavn.gearShift(int 1-5) 
 10. Man kan tjekke bilens hastighed, Gear samt dens RPM ved at skrive objektnavn.checkOdometer
