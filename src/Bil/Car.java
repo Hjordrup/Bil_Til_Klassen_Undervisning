@@ -5,8 +5,8 @@ public class Car {
     // Data fields
     private int currentSpeed;
     private boolean ignition = false;
-    private boolean engin = false;
-    private boolean handbreak = true;
+    private boolean engine = false;
+    private boolean handbrake = true;
     public String neededPassword = "Anders";
     private boolean lights = false;
     private int frontWipers = 0;
@@ -21,12 +21,14 @@ public class Car {
     public CarColor color;
     public FrontLightColor frontLightColor;
     public EnginState enginState = EnginState.OFF;
+    public Brand brand = Brand.Default;
 
     // constructor
 
     public Car() {
     }
-
+    public Car(Brand brand) {
+    }
 
     // Getters .
 
@@ -46,12 +48,12 @@ public class Car {
         return ignition;
     }
 
-    public boolean isEngin() {
-        return engin;
+    public boolean isEngine() {
+        return engine;
     }
 
-    public boolean isHandbreak() {
-        return handbreak;
+    public boolean isHandbrake() {
+        return handbrake;
     }
 
     public boolean isLights() {
@@ -92,12 +94,12 @@ public class Car {
         this.ignition = ignition;
     }
 
-    public void setEngin(boolean engin) {
-        this.engin = engin;
+    public void setEngine(boolean engine) {
+        this.engine = engine;
     }
 
-    public void setHandbreak(boolean handbreak) {
-        this.handbreak = handbreak;
+    public void setHandbrake(boolean handbrake) {
+        this.handbrake = handbrake;
     }
 
     public void setFrontWipers(int frontWipers) {
@@ -131,12 +133,12 @@ public class Car {
 
 
             this.ignition = true;
-            this.engin = true;
+            this.engine = true;
             enginState = EnginState.ON;
             System.out.println("bilens ignition == " + ignition);
-            System.out.println("bilens engin == " + engin);
+            System.out.println("bilens engin == " + engine);
         }else {
-            System.out.println("bilens ignition == " + engin);
+            System.out.println("bilens ignition == " + engine);
             System.out.println("bilens engin == " + ignition);
 
         }
@@ -144,7 +146,7 @@ public class Car {
     }
     //This methos starts the lights on the car.
     public void startLights(){
-        if(engin){
+        if(engine){
             setLights(true);
             System.out.println("bilens lys er nu tændt == " + lights);
         }else {
@@ -164,26 +166,26 @@ public class Car {
 
     // This method changese the state of the hanbreak to on,
     public void handBreakOn() {
-        if (!handbreak){
-            setHandbreak(true);
-            System.out.println("Nu er hånd bremsen trukket == " + handbreak);
+        if (!handbrake){
+            setHandbrake(true);
+            System.out.println("Nu er hånd bremsen trukket == " + handbrake);
             setCurrentSpeed(0);
             setCurrentGear(0);
 
 
-        }else System.out.println("Håndbremsen er trukket i forvejen " + handbreak);
+        }else System.out.println("Håndbremsen er trukket i forvejen " + handbrake);
     }
     // This method changese the state of the hanbreak to off,
     public void handbreakOff() {
-        if (handbreak){
-            setHandbreak(false);
-            System.out.println("Hånbremsen er nu slukket == " + handbreak);
-        }else System.out.println("Håndbremsen er slukket i forvejen == " + handbreak);
+        if (handbrake){
+            setHandbrake(false);
+            System.out.println("Hånbremsen er nu slukket == " + handbrake);
+        }else System.out.println("Håndbremsen er slukket i forvejen == " + handbrake);
 
     }
     // This method starts the front wipers
     public void vindScreenWiperOnFront(int speed) {
-        if (engin && speed <=5 && speed >0){
+        if (engine && speed <=5 && speed >0){
             setFrontWipers(speed);
             System.out.println("frontWipers are on and their speed is " + frontWipers);
         }else System.out.println("Tænd mortoren for at startet viskerne eller vælge en hastighed bilen kan bruge");
@@ -191,7 +193,7 @@ public class Car {
     }
     // This method turns the front Wipers on
     public void vindScreenWiperOnBack(int speed) {
-        if (engin && speed <=5 && speed >0){
+        if (engine && speed <=5 && speed >0){
             setBackWipers(speed);
             System.out.println("backWipers are on and their speed is " + backWipers);
         }else System.out.println("Tænd mortoren for at startet viskerne eller vælge en hastighed bilen kan bruge");
@@ -260,7 +262,7 @@ public class Car {
 
     // This method Engages the speedPedal
     public void pressSpeedPedal(int AmountOfSpeed) {
-        if (engin && !handbreak && currentGear>0)
+        if (engine && !handbrake && currentGear>0)
         if(AmountOfSpeed > 5 ){
             setSpeedPedal(5);
             setCurrentSpeed(currentGear * (speedPedal *8));
@@ -278,7 +280,7 @@ public class Car {
     }
     // This method starts the AutomatikGear
     public void gaerShift(int AutomatikGear) {
-        if(engin ) {
+        if(engine) {
             if (AutomatikGear < 0) {
                 setCurrentGear(0);
                 setCurrentRPM(getCurrentSpeed()*28);
