@@ -3,6 +3,7 @@ package Bil;
 public class Car {
 
 
+
     // Data fields
     private int currentSpeed;
     private boolean ignition = false;
@@ -17,11 +18,19 @@ public class Car {
     private int currentGear = 0;
     private int currentRPM = 0;
 
+    // Enums lavet for at vise hvad man kan bruge denne slags til.
+    public CarColor color;
+    public FrontLightColor frontLightColor;
+    public EnginState enginState = EnginState.OFF;
+
+
+
 
 // constructor
 
     public Car() {
     }
+
 
 
 
@@ -122,6 +131,7 @@ public class Car {
     }
 
 
+
     //methods
 
     public void startEngin(CarKey key){
@@ -130,6 +140,7 @@ public class Car {
 
             this.ignition = true;
             this.engin = true;
+            enginState = EnginState.ON;
             System.out.println("bilens ignition == " + ignition);
             System.out.println("bilens engin == " + engin);
         }else {

@@ -138,6 +138,50 @@ public class carTest {
         System.out.println("****************************************************************");
         System.out.println();
 
+        System.out.println("Test 22 test af enum til bil farve med BLACK INPUT -- forventet svar = BLACK");
+        testColur();
+        System.out.println("******************************************************************");
+        System.out.println();
+
+        System.out.println("Test 23 test af enum til at sætte forlygte farve -- forventet svar er WHITE");
+        testLightClolor();
+        System.out.println("*****************************************************************");
+        System.out.println();
+
+        System.out.println("Test 24 test af enum EnginStateOn med en tændt bil -- forventet svar er ON" );
+        testMortorOn();
+        System.out.println("***************************************************************");
+        System.out.println();
+
+        System.out.println("Test 25 test af enum EnginState med en slukket bil -- forventet svar er OFF" );
+        testMortorOn1();
+        System.out.println("***************************************************************");
+        System.out.println();
+    }
+
+    private static void testMortorOn1() {
+        Car carFord = new Car();
+        System.out.println("This is the EngingState"  + carFord.enginState);
+    }
+
+    private static void testMortorOn() {
+        Car carFord = new Car();
+        CarKey k1 = new CarKey("Anders");
+        carFord.startEngin(k1);
+        System.out.println("This is the EngingState"  + carFord.enginState);
+    }
+
+    private static void testLightClolor() {
+        Car carFord = new Car();
+        carFord.frontLightColor = FrontLightColor.WHITE;
+        System.out.println("This is the color of the front lights " + carFord.frontLightColor);
+
+    }
+
+    private static void testColur() {
+        Car carFord = new Car();
+        carFord.color = CarColor.BLACK;
+        System.out.println("This is the color of the car " + carFord.color);
 
     }
 
