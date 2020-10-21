@@ -257,7 +257,6 @@ public class carTest {
 
     }
 
-
     private static void testvindScreenWiperOffBack() {
         Car carFord = new Car();
         CarKey key = new CarKey("Anders");
@@ -265,11 +264,6 @@ public class carTest {
         carFord.vindScreenWiperOnBack(2);
         carFord.vindScreenWiperOffBack();
     }
-
-
-
-
-
 
     private static void testvindScreenWiperOffFront() {
         Car carFord = new Car();

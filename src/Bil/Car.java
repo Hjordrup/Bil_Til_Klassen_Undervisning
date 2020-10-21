@@ -2,8 +2,6 @@ package Bil;
 
 public class Car {
 
-
-
     // Data fields
     private int currentSpeed;
     private boolean ignition = false;
@@ -18,29 +16,23 @@ public class Car {
     private int currentGear = 0;
     private int currentRPM = 0;
 
+
     // Enums lavet for at vise hvad man kan bruge denne slags til.
     public CarColor color;
     public FrontLightColor frontLightColor;
     public EnginState enginState = EnginState.OFF;
 
-
-
-
-// constructor
+    // constructor
 
     public Car() {
     }
 
 
-
-
-// Getters .
-
+    // Getters .
 
     public int getCurrentRPM() {
         return currentRPM;
     }
-
 
     public int getBreakPedal() {
         return breakPedal;
@@ -84,8 +76,6 @@ public class Car {
 
 
     // setters
-
-
     public void setCurrentRPM(int currentRPM) {
         this.currentRPM = currentRPM;
     }
@@ -134,6 +124,8 @@ public class Car {
 
     //methods
 
+
+    // This method Starts the engin if the right key is given.
     public void startEngin(CarKey key){
         if (key.password.equals(neededPassword)) {
 
@@ -150,7 +142,7 @@ public class Car {
         }
 
     }
-
+    //This methos starts the lights on the car.
     public void startLights(){
         if(engin){
             setLights(true);
@@ -161,7 +153,7 @@ public class Car {
 
 
     }
-
+    // This method turns the light off.
     public void endLights(){
         if(lights){
             setLights(false);
@@ -170,7 +162,7 @@ public class Car {
 
     }
 
-
+    // This method changese the state of the hanbreak to on,
     public void handBreakOn() {
         if (!handbreak){
             setHandbreak(true);
@@ -181,7 +173,7 @@ public class Car {
 
         }else System.out.println("Håndbremsen er trukket i forvejen " + handbreak);
     }
-
+    // This method changese the state of the hanbreak to off,
     public void handbreakOff() {
         if (handbreak){
             setHandbreak(false);
@@ -189,7 +181,7 @@ public class Car {
         }else System.out.println("Håndbremsen er slukket i forvejen == " + handbreak);
 
     }
-
+    // This method starts the front wipers
     public void vindScreenWiperOnFront(int speed) {
         if (engin && speed <=5 && speed >0){
             setFrontWipers(speed);
@@ -197,7 +189,7 @@ public class Car {
         }else System.out.println("Tænd mortoren for at startet viskerne eller vælge en hastighed bilen kan bruge");
 
     }
-
+    // This method turns the front Wipers on
     public void vindScreenWiperOnBack(int speed) {
         if (engin && speed <=5 && speed >0){
             setBackWipers(speed);
@@ -205,7 +197,7 @@ public class Car {
         }else System.out.println("Tænd mortoren for at startet viskerne eller vælge en hastighed bilen kan bruge");
 
     }
-
+    // This method turns the front Wipers off
     public void vindScreenWiperOffFront() {
         if (frontWipers>0){
             setFrontWipers (0);
@@ -214,7 +206,7 @@ public class Car {
         }else System.out.println("viskerne er i forvejen slukket og står på = " + frontWipers);
 
     }
-
+    // This method turns then back Wipers off
     public void vindScreenWiperOffBack() {
         if (backWipers>0){
             setBackWipers(0);
@@ -224,7 +216,7 @@ public class Car {
 
     }
 
-
+    // This method engages the BreakPedal
     public void pressBreakPedal(int AmountOfBreaking) {
         if(AmountOfBreaking >= 5 ){
             if (getCurrentSpeed() > 0){
@@ -266,7 +258,7 @@ public class Car {
 
     }
 
-
+    // This method Engages the speedPedal
     public void pressSpeedPedal(int AmountOfSpeed) {
         if (engin && !handbreak && currentGear>0)
         if(AmountOfSpeed > 5 ){
@@ -284,7 +276,7 @@ public class Car {
 
 
     }
-
+    // This method starts the AutomatikGear
     public void gaerShift(int AutomatikGear) {
         if(engin ) {
             if (AutomatikGear < 0) {
@@ -298,7 +290,7 @@ public class Car {
 
 
     }
-
+    // This method calls the Odometer,
     public void checkOdometer() {
         System.out.println("Detter er bilens Gear " + currentGear);
         System.out.println("Dette er bilens Hastighed " + currentSpeed);
@@ -308,7 +300,7 @@ public class Car {
 
     }
 
-
+    // This method checks the RPM
     public void checkRPM() {
         setCurrentRPM(getCurrentSpeed()*28);
 
